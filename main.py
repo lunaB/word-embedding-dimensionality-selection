@@ -21,7 +21,7 @@ if __name__ == "__main__":
     config_file = args.config_file
 
     with open(args.config_file, "r") as f:
-        cfg = yaml.load(f)
+        cfg = yaml.load(f, Loader=yaml.SafeLoader)
 
     reader = ReaderFactory.produce(args.file[-3:])
     data = reader.read_data(args.file)
