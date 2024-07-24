@@ -19,7 +19,7 @@ class SignalMatrix():
     def __init__(self, corpus=None):
         self.corpus = corpus
         self._param_dir = "params/{}".format(self.__class__.__name__)
-	if not os.path.exists(self._param_dir):
+        if not os.path.exists(self._param_dir):
             os.makedirs(self._param_dir)
         self._get_vocab_size()
 
